@@ -1,0 +1,10 @@
+{% extends "home/home.html" %}
+
+{% block main %}
+<form>
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Update">
+<form>
+
+{% endblock %}

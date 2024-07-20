@@ -1,0 +1,17 @@
+{% extends "home/home.html" %}
+{% block main %}
+<div>
+<h1>
+    Checkout
+</h1>
+
+<p><h5>Total Price:</h5> <span style="text-decoration-line:line-through;text-decoration-style:double;">N</span>{{ total_price}}</p>
+<p>
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Place an Order">
+</form>
+</div>
+        
+{% endblock %}
